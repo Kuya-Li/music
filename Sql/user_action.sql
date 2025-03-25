@@ -1,0 +1,18 @@
+
+
+SET NAMES utf8mb4;
+SET FOREIGN_KEY_CHECKS = 0;
+
+
+DROP TABLE IF EXISTS `user_action`;
+CREATE TABLE `user_action`  (
+  `id` bigint NOT NULL AUTO_INCREMENT COMMENT 'id,自增主键',
+  `uid` int NULL DEFAULT NULL COMMENT '用户ID',
+  `music_id` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '音乐ID',
+  `likes` tinyint NULL DEFAULT NULL COMMENT '是否喜欢',
+  `plays` int UNSIGNED NULL DEFAULT NULL COMMENT '是否播放',
+  `favs` tinyint NULL DEFAULT NULL COMMENT '是否收藏',
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 10002 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+
+SET FOREIGN_KEY_CHECKS = 1;

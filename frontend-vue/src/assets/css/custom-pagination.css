@@ -1,0 +1,69 @@
+/* custom-pagination.css */
+.el-pagination {
+    margin-top: 20px; /* 调整分页器的上边距 */
+    text-align: center; /* 居中对齐 */
+}
+
+.el-pagination .el-pager li {
+    border: 1px solid #d9d9d9; /* 添加边框 */
+    margin: 0 2px; /* 调整分页按钮之间的间距 */
+}
+
+.el-pagination .el-pager li a {
+    color: #333; /* 设置链接颜色 */
+    border: none; /* 移除链接的边框 */
+}
+
+.el-pagination .el-pager li.el-pagination--current {
+    background-color: #f3f3f3; /* 设置当前页的背景色 */
+    color: #1890ff; /* 设置当前页的文字颜色 */
+}
+
+.el-pagination .el-pager li:hover:not(.el-pagination--current) {
+    background-color: #e6e6e6; /* 设置鼠标悬停时的背景色 */
+}
+
+.m-wrap {
+    overflow: hidden;
+    margin: 0 auto;
+    width: 980px;
+    border: 1px solid #d3d3d3;
+    border-bottom: none;
+    background: #fff;
+}
+
+.h-title,
+.more i {
+    background: url(../img/index01.png) no-repeat;
+}
+.icon,
+.play{
+    background: url(../img/index02.png) no-repeat;
+}
+.h-title {
+    height: 33px;
+    padding: 0 10px 0 34px;
+    background-position: -225px -156px;
+    border-bottom: 2px solid #C10D0C;
+}
+.h-title h2 {
+    float: left;
+    zoom: 1;
+    font-size: 20px;
+    line-height: 28px;
+}
+.h-title h2 a {
+    color: #333;
+}
+.h-title .h-list {
+    float: left;
+    zoom: 1;
+    margin: 7px 0 0 20px;
+}
+.h-title .h-list a {
+    color: #666;
+}
+.h-title .h-list .line {
+    margin: 0 10px;
+    color: #ccc;
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.sp.mapper.UserOperateMapper">
+    <select id="getUserOperate" resultType="com.example.sp.bean.UserOperate">
+        select * from user_music where uid=#{uid} and music_id=#{music_id}
+    </select>
+    <insert id="addUserOperate">
+        insert into user_music(uid, music_id, likes, plays, favs) values (#{uid}, #{music_id}, 0, 1, 0)
+    </insert>
+    <update id="updateUserOperate">
+        update user_music set plays = plays + 1 where uid=#{uid} and music_id=#{music_id}
+    </update>
+    <insert id="addUserLikeOperate">
+        insert into user_music(uid, music_id, likes, plays, favs) values (#{uid}, #{music_id}, 1, 0, 0)
+    </insert>
+    <update id="updateUserLikeOperate">
+        update user_music set likes = likes ^ 1 where uid=#{uid} and music_id=#{music_id}
+    </update>
+    <insert id="addUserFavOperate">
+        insert into user_music(uid, music_id, likes, plays, favs) values (#{uid}, #{music_id}, 0, 0, 1)
+    </insert>
+    <update id="updateUserFavOperate">
+        update user_music set favs = favs ^ 1 where uid=#{uid} and music_id=#{music_id}
+    </update>
+</mapper>
